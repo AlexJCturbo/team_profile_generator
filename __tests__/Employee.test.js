@@ -6,7 +6,6 @@ test('create an employee object', () => {
   expect(employee.name).toEqual(expect.any(String));
   expect(employee.id).toEqual(expect.any(String));
   expect(employee.email).toEqual(expect.any(String));
-  expect(employee.office).toEqual(expect.any(Number));
 })
 
 test("get the employee's name", () => {
