@@ -53,7 +53,7 @@ Install the dependencies on your computer: Node.js, Jest and npm inquirer. Add a
 	
 
 ## Questions
-Please, fee free to get in touch with me at jaimes.ac.5@gmail.com to discuss any inquiries or suggestions for the project. I will be happy to connect with you!
+Please, feel free to get in touch with me at jaimes.ac.5@gmail.com to discuss any inquiries or suggestions for the project. I will be happy to connect with you!
 ###### [Back to Index](#Table-of-Contents)
 	
 
