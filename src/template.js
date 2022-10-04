@@ -67,24 +67,19 @@ const  generateTeamProfile = (team) => {
       </div>
     </div>
 
-  `;
+  `
   ;}
   teamMembers.push(team
     .filter((employee) => employee.getRole() === "Intern")
     .map((intern) => generateIntern(intern))
     .join("")
     );
-    
-    console.log(teamMembers);
 
     return teamMembers.join('');
-
 };
 
 //Create the profiles section
 const profileTemplate = (team) => {
-  //console.log(team);
-  //const {name, id, email, office, github, school} = team;
 
   return `
 <!DOCTYPE html>
@@ -111,11 +106,7 @@ const profileTemplate = (team) => {
   <main>
     <div class="container d-flex justify-content-center py-5">
       <div class="row row-cols1 row-cols-3 mb-3 d-flex justify-content-center text-center" id="employeeBoxes">
-
-
-      ${generateTeamProfile(team)}
-
-
+        ${generateTeamProfile(team)}
       </div>
     </div>
   </main>
@@ -126,4 +117,3 @@ const profileTemplate = (team) => {
 }
 
 module.exports = profileTemplate;
-

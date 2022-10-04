@@ -5,7 +5,6 @@ const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const template = require('./template');
 
-
 //Main function of the Team Profile Generator
 function Generator() {
   this.manager;
@@ -16,13 +15,10 @@ function Generator() {
   //Function to collect manager data
   Generator.prototype.initializeGenerator = function() {
     console.log(`
-
 Welcome to the Team Profile Generator!
-
 ==============================================================
 To generate the team profile provide the following information
 ==============================================================
-
     `);
 
     inquirer.prompt([
@@ -85,11 +81,9 @@ To generate the team profile provide the following information
     })
   };
 
-
   //Function to add members to the team or continue generating team profile
   Generator.prototype.goToMenu = function() {
     console.log(`
-
 ------------------------------------------------------------------
 Select an option from the next list to continue building the team.
     `)
@@ -116,7 +110,6 @@ Select an option from the next list to continue building the team.
       })
   };
 
-  
   //Function to collect engineers data
   Generator.prototype.addEngineer = function() {
     inquirer.prompt([
@@ -178,7 +171,6 @@ Select an option from the next list to continue building the team.
       this.goToMenu();
     })
   };
-
 
   //Function to collect interns data
   Generator.prototype.addIntern = function() {
@@ -245,7 +237,6 @@ Select an option from the next list to continue building the team.
   //Function to generate the team profile and write the HTML file
   Generator.prototype.buildTeam = function() {
     const teamData = template(this.team);
-    //console.log(teamData);
 
     return new Promise((resolve, reject) => {
       fs.writeFile('./dist/index.html', template(this.team), err => {
@@ -272,7 +263,6 @@ Select an option from the next list to continue building the team.
 
     });
   };
-
 };
 
 module.exports = Generator;
