@@ -84,5 +84,5 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 
 ### Walkthrough Video
-The following [walkthrough video](https://drive.google.com/) demonstrates the functionality of the Team Profile Generator.
+The following [walkthrough video](https://drive.google.com/update) demonstrates the functionality of the Team Profile Generator.
 ###### [Back to Index](#Table-of-Contents)

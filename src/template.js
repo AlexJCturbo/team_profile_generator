@@ -4,7 +4,6 @@ const  generateTeamProfile = (team) => {
   const teamMembers = [];
   
   const generateManager = manager => {
-    console.log(manager);
 	  return `
     <div class="card mb-3 p-3">
       <div class="card-header text-white bg-primary">
@@ -27,8 +26,7 @@ const  generateTeamProfile = (team) => {
     );
 
   const generateEngineer = engineer => {
-    console.log(engineer);
-      return `
+    return `
     <div class="card mb-3 p-3">
       <div class="card-header text-white bg-success">
         <h2 class="card-title">${engineer.getName()}</h2>
@@ -51,8 +49,7 @@ const  generateTeamProfile = (team) => {
         );
 
   const generateIntern = intern => {
-    console.log(intern);
-  return `
+    return `
     <div class="card mb-3 p-3">
       <div class="card-header text-white bg-info">
         <h2 class="card-title">${intern.getName()}</h2>
@@ -75,6 +72,7 @@ const  generateTeamProfile = (team) => {
     .join("")
     );
 
+    console.log(team);
     return teamMembers.join('');
 };
 
