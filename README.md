@@ -31,6 +31,11 @@ The project consists of a series of constructors and one super constructor that 
 When running the app, the user is prompted with a series of questions to collect the data of each team member. The npm inquirer was utilized for this purpose.
 
 After collecting all the team members' data, the program generates the HTML and CSS files that contain cards with each team member's information.
+
+The following image is a sample profile team created with this application:
+
+![Team Profile Generator screenshot](./src/images/sample_screenshot.jpg)
+
 ###### [Back to Index](#Table-of-Contents)
 
 
@@ -83,6 +88,6 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 ###### [Back to Index](#Table-of-Contents)
 
 
-### Walkthrough Video
+## Walkthrough Video
 The following [walkthrough video](https://drive.google.com/file/d/1xsPNB_mdybmnOsZV8lGk9hyhJXhKo4tn/view?usp=sharing) demonstrates the functionality of the Team Profile Generator.
 ###### [Back to Index](#Table-of-Contents)
