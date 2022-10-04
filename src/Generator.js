@@ -64,10 +64,10 @@ To generate the team profile provide the following information
       },
       {
         type: 'input',
-        name: 'officeNumber',
+        name: 'office',
         message: "Enter the manager's office number (required):",
-        validate: emailManager => {
-          if (emailManager) {
+        validate: officeManager => {
+          if (officeManager) {
             return true;
           } else {
             console.log("Please enter the manager's office number:");
@@ -77,8 +77,8 @@ To generate the team profile provide the following information
     ])
     .then(managerData => {
       //Destructuring the answers
-      const {name, id, email, officeNumber} = managerData;
-      this.manager = new Manager(name, id, email, officeNumber);
+      const {name, id, email, office} = managerData;
+      this.manager = new Manager(name, id, email, office);
       this.team.push(this.manager);
       console.log(this.team);
       this.goToMenu();
@@ -101,7 +101,7 @@ Select an option from the next list to continue building the team.
         choices: [
           'Add an engineer to the team.',
           'Add an intern to the team.',
-          'Finish creating the team.']
+          'Create the team profile.']
       })
       .then(selection => {
         console.log(selection.menu);
@@ -160,8 +160,8 @@ Select an option from the next list to continue building the team.
         type: 'input',
         name: 'github',
         message: "Enter the engineer's GitHub (required):",
-        validate: emailManager => {
-          if (emailManager) {
+        validate: githubManager => {
+          if (githubManager) {
             return true;
           } else {
             console.log("Please enter the engineer's GitHub:");
@@ -223,8 +223,8 @@ Select an option from the next list to continue building the team.
         type: 'input',
         name: 'school',
         message: "Enter the intern's school (required):",
-        validate: emailManager => {
-          if (emailManager) {
+        validate: schoolManager => {
+          if (schoolManager) {
             return true;
           } else {
             console.log("Please enter the intern's school:");
@@ -242,13 +242,36 @@ Select an option from the next list to continue building the team.
     })
   };
 
-  //Function to continue generating the team profile
-  Generator.prototype.buildTeam = function() {}
+  //Function to generate the team profile and write the HTML file
+  Generator.prototype.buildTeam = function() {
+    const teamData = template(this.team);
+    //console.log(teamData);
 
+    return new Promise((resolve, reject) => {
+      fs.writeFile('./dist/index.html', template(this.team), err => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve({
+          ok: true,
+          message: 'File created!'
+        });
+      });
 
+      fs.copyFile('./src/style.css', './dist/style.css', err => {
+        if (err) {
+            reject(err);
+            return;
+        }
+        resolve ({
+            ok: true,
+            message: 'Style sheet copied successfully!'
+        });
+      });
 
-
-
+    });
+  };
 
 };
 
