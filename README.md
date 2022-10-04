@@ -8,8 +8,6 @@
 
 - [Usage](#Usage)
 
-- [Contribution Guidelines](#Contribution-Guidelines)
-
 - [Test Instructions](#Test-Instructions)
 
 - [Questions](#Questions)
@@ -47,12 +45,7 @@ To run the team profile generator, the user must install Node.js, the npm inquir
 ## Usage
 To run this program, the user has to initialize the app in the command line from the terminal in the main directory of the project by entering the command “node index.js”. This command executes the program and the user is prompted with a series of questions from the team members. With the data of the employees, the app will generate the HTML and CSS files within the dist directory.
 ###### [Back to Index](#Table-of-Contents)
-	
 
-## Contribution Guidelines
-Feel free to contribute with this repository and/or get in touch with me to comment on the project.
-###### [Back to Index](#Table-of-Contents)
-	
 
 ## Test Instructions
 Install the dependencies on your computer: Node.js, Jest and npm inquirer. Add a .gitignore file and include node_modules/ and .DS_Store/. To test the constructors using Jest, in the command line type "npm run test" to verify that they are working correctly. Then, execute the app from the terminal by typing “node index.js” from the directory where it is located. The program must then run.
