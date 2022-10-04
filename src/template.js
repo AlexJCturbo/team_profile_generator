@@ -1,5 +1,3 @@
-//const Intern = require("../lib/Intern");
-
 const  generateTeamProfile = (team) => {
   const teamMembers = [];
   
